@@ -64,7 +64,10 @@ h3 { font-size: 18px; line-height: 1.3; }
 .card h3 { margin-top: 0; }
 .card .num + h3 { margin-top: 14px; }
 .card p { margin: 8px 0 0; color: var(--dim); font-size: 15px; }
-.card .btn { margin-top: 22px; }
+/* A card is a column, so a button sits at the bottom and side-by-side cards line their buttons up. */
+.card { display: flex; flex-direction: column; }
+.card .btn { margin-top: auto; align-self: flex-start; }
+.card p:has(+ .btn) { margin-bottom: 22px; }
 .num { font: 700 13px var(--mono); letter-spacing: .1em; color: var(--orange); }
 /* the app's corner brackets */
 .br::before, .br::after { content: ""; position: absolute; width: 18px; height: 18px; border: 0 solid var(--teal); opacity: .8; }
