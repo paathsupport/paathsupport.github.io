@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help: PAATH</title>
+<meta name="description" content="Setup, tips and fixes for PAATH, the same help as the app's HELP page.">
+<meta name="theme-color" content="#07090c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paathsupport.github.io/help.html">
+<meta property="og:title" content="PAATH help: setup, tips and fixes">
+<meta property="og:description" content="The same help as the app's HELP page.">
+<meta property="og:image" content="https://paathsupport.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="logo" href="index.html" aria-label="PAATH home"><img src="assets/icon-64.png" alt="" width="30" height="30"><span>PA<span class="a">A</span>TH</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">HOW IT WORKS</a>
+      <a href="help.html">HELP</a>
+      <a class="nav-go" href="index.html#join">JOIN THE TEST</a>
+      
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="help">
+  <div class="wrap">
+    <div class="help-intro">
+      <p class="kick">HELP</p>
+      <h1 class="help-h">Tips and troubleshooting</h1>
+      <p class="lead">The same help as the app's HELP page. Tap a topic to open it.</p>
+    </div>
+    <div class="help-grid">
+      <aside class="help-side">
+<nav class="toc" aria-label="Help topics">
+<p class="toc-h">BASICS</p>
+<ul>
+<li><a href="#how-paath-works">How PAATH works</a></li>
+<li><a href="#one-time-setup">One time setup</a></li>
+<li><a href="#best-hotspot-setup">Best hotspot setup</a></li>
+<li><a href="#what-is-normal">What is normal</a></li>
+</ul>
+<p class="toc-h">TROUBLESHOOTING</p>
+<ul>
+<li><a href="#no-picture-or-android-auto-does-not-open">No picture, or Android Auto does not open</a></li>
+<li><a href="#page-does-not-load-in-the-car">The page does not load in the car</a></li>
+<li><a href="#picture-stutters-or-freezes">The picture stutters or freezes</a></li>
+<li><a href="#sound-is-choppy-or-stops">The sound is choppy or stops</a></li>
+<li><a href="#car-drops-off-the-hotspot-during-a-call">The car drops off the hotspot during a call</a></li>
+<li><a href="#picture-is-cut-off-or-has-black-bars">The picture is cut off or has black bars</a></li>
+<li><a href="#no-sound-when-this-phone-is-the-screen">No sound when this phone is the screen</a></li>
+<li><a href="#phone-needs-to-cool-down-message">&quot;Phone needs to cool down&quot; message</a></li>
+<li><a href="#still-stuck">Still stuck?</a></li>
+</ul>
+</nav>
+      </aside>
+      <div class="help-main">
+<section class="help-group" aria-labelledby="basics">
+<h2 class="kick" id="basics">BASICS</h2>
+<details class="entry" id="how-paath-works">
+<summary><span class="mk" aria-hidden="true"></span><span>How PAATH works</span></summary>
+<div class="entry-body">
+<p class="step-one">Your phone runs Android Auto as if it were plugged into a car. PAATH takes the picture and sound and sends them to your Tesla's browser over your phone's hotspot. You use Android Auto on the car's screen while the phone stays in your pocket.</p>
+
+</div>
+</details>
+<details class="entry" id="one-time-setup">
+<summary><span class="mk" aria-hidden="true"></span><span>One time setup</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Open Android Auto settings, scroll down and tap Version ten times to turn on developer settings.</li>
+<li>Scroll back up, tap the three dots at the top right and choose Start head unit server.</li>
+<li>In PAATH, tap START. If Android asks to allow a VPN, allow it. PAATH uses it only to give the car a fixed address to reach; your internet traffic does not go through it.</li>
+<li>Turn on your hotspot and connect the car to it.</li>
+<li>In the car's browser, open the address PAATH shows on its home screen.</li>
+<li>Pairing your car in PAATH is optional. It lets PAATH start on its own when you get in. To have it stop when you get out too, turn on Stop when I leave the car in Settings, Car.</li>
+</ol>
+<p class="inapp">In the app: the ANDROID AUTO SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="best-hotspot-setup">
+<summary><span class="mk" aria-hidden="true"></span><span>Best hotspot setup</span></summary>
+<div class="entry-body">
+<ul class="steps">
+<li>Use 5 GHz if your phone offers it and your car connects to it.</li>
+<li>Otherwise use 2.4 GHz and set the broadcast channel to 11.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> The broadcast channel setting only appears when Wi-Fi sharing is off.</li>
+<li><span class="tag tag-others">OTHER PHONES</span> Look for a channel or broadcast channel option in your hotspot settings. Not every phone has one.</li>
+<li>Keep mobile data on. The car leaves a hotspot that has no internet within a second.</li>
+</ul>
+<p class="inapp">In the app: the HOTSPOT SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="what-is-normal">
+<summary><span class="mk" aria-hidden="true"></span><span>What is normal</span></summary>
+<div class="entry-body">
+<ul class="steps">
+<li>The picture stops while you reverse. The car gives the screen to the cameras, and the picture comes back after.</li>
+<li>Music plays about one second behind. That cushion keeps it smooth through short hiccups.</li>
+<li>The navigation voice starts about half a second late, for the same reason.</li>
+<li>During a phone call the picture gets softer on purpose, so it keeps moving.</li>
+<li>The phone gets warm. Most of the heat comes from Android Auto, the hotspot and Bluetooth, not from the picture quality.</li>
+<li>If Stop when I leave the car is on, PAATH stops about 25 seconds after you leave.</li>
+<li>For a sharper picture, raise the bitrate in Settings, Video &amp; Sound. The frame rate does not change how much the connection carries.</li>
+</ul>
+
+</div>
+</details>
+</section>
+<section class="help-group" aria-labelledby="troubleshooting">
+<h2 class="kick" id="troubleshooting">TROUBLESHOOTING</h2>
+<details class="entry" id="no-picture-or-android-auto-does-not-open">
+<summary><span class="mk" aria-hidden="true"></span><span>No picture, or Android Auto does not open</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Unlock your phone. Android Auto may be waiting for you. Tap PAATH's notification if you see one. Do Not Disturb can hide it.</li>
+<li>If PAATH says Android Auto is not responding, clear all your recent apps, then open Android Auto settings and turn on Start head unit server again. Stopping and starting PAATH does not fix this.</li>
+<li>If your phone restarted or Android Auto was closed, check that Start head unit server is on. It does not turn itself back on.</li>
+<li>Make sure Android Auto is up to date. Very old versions ignore PAATH.</li>
+</ol>
+<p class="inapp">In the app: the ANDROID AUTO SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="page-does-not-load-in-the-car">
+<summary><span class="mk" aria-hidden="true"></span><span>The page does not load in the car</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Check that the car is connected to your phone's hotspot.</li>
+<li>Check that mobile data is on. The car leaves a hotspot without internet within a second.</li>
+<li>Check that PAATH is started.</li>
+<li>Use the address shown on PAATH's home screen.</li>
+<li>After updating PAATH, reload the page in the car once.</li>
+</ol>
+<p class="inapp">In the app: the HOTSPOT SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="picture-stutters-or-freezes">
+<summary><span class="mk" aria-hidden="true"></span><span>The picture stutters or freezes</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Turn off the car's Bluetooth media audio. It made the biggest difference in our tests.</li>
+<li>Use 5 GHz if your phone and car allow it. Otherwise set the broadcast channel to 11.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Turn off Wi-Fi sharing first, or the broadcast channel setting stays hidden.</li>
+<li>Do not reload the page during a freeze. It recovers on its own.</li>
+<li>On 2.4 GHz, short freezes can happen during phone calls. The picture gets softer on purpose to ride through them.</li>
+</ol>
+<p class="inapp">In the app: the BLUETOOTH SETTINGS button on the HELP page.</p>
+<p class="inapp">In the app: the HOTSPOT SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="sound-is-choppy-or-stops">
+<summary><span class="mk" aria-hidden="true"></span><span>The sound is choppy or stops</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Turn on Opus audio in Settings, Video &amp; Sound.</li>
+<li>The steps for a stuttering picture help the sound too.</li>
+</ol>
+<p class="inapp">In the app: the VIDEO &amp; SOUND SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="car-drops-off-the-hotspot-during-a-call">
+<summary><span class="mk" aria-hidden="true"></span><span>The car drops off the hotspot during a call</span></summary>
+<div class="entry-body">
+<p class="step-one">This can happen on 2.4 GHz. The car reconnects on its own, usually within a few minutes.</p>
+
+</div>
+</details>
+<details class="entry" id="picture-is-cut-off-or-has-black-bars">
+<summary><span class="mk" aria-hidden="true"></span><span>The picture is cut off or has black bars</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>Fill screen in Settings, Video &amp; Sound shapes Android Auto to your screen. It is on by default.</li>
+<li>On a phone or tablet, after you rotate the screen, wait about two seconds for Android Auto to adjust.</li>
+</ol>
+<p class="inapp">In the app: the VIDEO &amp; SOUND SETTINGS button on the HELP page.</p>
+</div>
+</details>
+<details class="entry" id="no-sound-when-this-phone-is-the-screen">
+<summary><span class="mk" aria-hidden="true"></span><span>No sound when this phone is the screen</span></summary>
+<div class="entry-body">
+<p class="step-one">PAATH plays the sound through this phone's speaker by itself. While Android Auto runs, it takes other apps' sound, so the browser stays quiet on purpose.</p>
+
+</div>
+</details>
+<details class="entry" id="phone-needs-to-cool-down-message">
+<summary><span class="mk" aria-hidden="true"></span><span>&quot;Phone needs to cool down&quot; message</span></summary>
+<div class="entry-body">
+<p class="step-one">This message comes from Google Maps, not from PAATH. Waze does not have this limit. PAATH lowers the picture quality on its own when the phone gets truly hot.</p>
+
+</div>
+</details>
+<details class="entry" id="still-stuck">
+<summary><span class="mk" aria-hidden="true"></span><span>Still stuck?</span></summary>
+<div class="entry-body">
+<p class="step-one">Share your log and send it with a short description of what happened.</p>
+<p class="inapp">In the app: About, Share Log, then send it to paath.support@gmail.com.</p>
+</div>
+</details>
+</section>
+        <p class="more">Still stuck? Email <a href="mailto:paath.support@gmail.com">paath.support@gmail.com</a> with your phone and car model.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="logo" href="index.html" aria-label="PAATH home"><img src="assets/icon-64.png" alt="" width="30" height="30"><span>PA<span class="a">A</span>TH</span></a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="help.html">Help</a>
+        <a href="https://paathsupport.github.io/paath-site/">Privacy</a>
+        <a href="https://ko-fi.com/paath">Support the project</a>
+        <a href="mailto:paath.support@gmail.com">paath.support@gmail.com</a>
+      </nav>
+    </div>
+    <p class="legal">PAATH is an independent project and is not affiliated with, endorsed by, or sponsored by Google or Tesla. Android Auto is a trademark of Google LLC. Tesla is a trademark of Tesla, Inc.</p>
+    <p class="legal">This site uses no cookies and loads nothing from other sites.</p>
+  </div>
+</footer>
+
+<script>
+  // A link to help.html#topic should land on that topic opened, not closed.
+  function openTopic(hash) {
+    var id;
+    try { id = decodeURIComponent(hash.slice(1)); } catch (e) { return; }
+    var el = id && document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  addEventListener('hashchange', function () { openTopic(location.hash); });
+  // Tapping the link of a topic already in the address changes no hash, so open it on the tap too.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (a) openTopic(a.getAttribute('href'));
+  });
+  openTopic(location.hash);
+</script>
+</body>
+</html>
