@@ -178,3 +178,8 @@ h3 { font-size: 18px; line-height: 1.3; }
 
 /* 404 */
 .lost { padding: clamp(72px, 14vw, 160px) 0; }
+
+/* Licenses */
+.licenses { padding: clamp(56px, 10vw, 120px) 0; }
+.lic-grid { margin-top: 36px; }
+.lic-grid h2 { margin-top: 0; font-size: 18px; line-height: 1.3; }
