@@ -1,13 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<script>(function () { var pick = function pickLanguage(stored, referrer, host, languages) {
+    if (stored === 'he') return 'he';
+    if (stored === 'en') return 'en';
+    var from = '';
+    var path = '';
+    try { if (referrer) { var u = new URL(referrer); from = u.host; path = u.pathname; } } catch (e) { from = ''; }
+    if (from && from === host && /^\/(he\/)?([a-z0-9-]+\.html)?$/.test(path)) return 'en';
+    var first = (languages && languages.length ? languages[0] : '') || '';
+    return /^(he|iw)(-|$)/i.test(first) ? 'he' : 'en';
+}; var stored = null; try { stored = localStorage.getItem('paath-lang'); } catch (e) {} var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']; if (pick(stored, document.referrer, location.host, langs) === 'he') location.replace('he/index.html' + location.hash); })();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PAATH: Android Auto, in your car's browser</title>
 <meta name="description" content="Your phone streams Android Auto to your car's built-in browser over its own hotspot. No extra hardware, free.">
 <meta name="theme-color" content="#07090c">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://paathsupport.github.io/">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="PAATH: Android Auto, in your car's browser">
 <meta property="og:description" content="Your phone streams Android Auto to your car's built-in browser over its own hotspot. No extra hardware, free.">
 <meta property="og:image" content="https://paathsupport.github.io/assets/og-image.png">
@@ -15,6 +26,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PAATH: Android Auto, in your car's browser.">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://paathsupport.github.io/">
+<link rel="alternate" hreflang="he" href="https://paathsupport.github.io/he/">
+<link rel="alternate" hreflang="x-default" href="https://paathsupport.github.io/">
+
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="css/fonts.css">
@@ -30,6 +45,10 @@
       <a href="help.html">HELP</a>
       <a class="nav-go" href="index.html#join">JOIN THE TEST</a>
       
+      <details class="lang-pick">
+        <summary aria-label="Language" title="Language"><svg class="globe" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.9 5.5 3.9 9s-1.3 6.5-3.9 9c-2.6-2.5-3.9-5.5-3.9-9S9.4 5.5 12 3z"/></svg></summary>
+        <div class="lang-menu"><a href="index.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="he/index.html" hreflang="he" lang="he" data-lang="he">עברית</a></div>
+      </details>
     </nav>
   </div>
 </header>
@@ -39,7 +58,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kick">PHONE &gt; HOTSPOT &gt; CAR BROWSER</p>
+      <p class="kick">PHONE > HOTSPOT > CAR BROWSER</p>
       <h1>Android Auto, in your car's browser.</h1>
       <p class="lead">Your phone streams it over its own hotspot. No dongle, no cable, and free.</p>
       <div class="btns">
@@ -153,6 +172,7 @@
     <p class="legal">This site uses no cookies and loads nothing from other sites.</p>
   </div>
 </footer>
+<script>document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[data-lang]'); if (!a) return; try { localStorage.setItem('paath-lang', a.getAttribute('data-lang')); } catch (err) {} a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash); }); document.addEventListener('click', function (e) { var d = document.querySelector('details.lang-pick'); if (d && d.open && !d.contains(e.target)) d.open = false; }); document.addEventListener('keydown', function (e) { var d = document.querySelector('details.lang-pick'); if (e.key === 'Escape' && d && d.open) { d.open = false; d.querySelector('summary').focus(); } });</script>
 
 </body>
 </html>

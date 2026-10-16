@@ -1,11 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<script>(function () { var pick = function pickLanguage(stored, referrer, host, languages) {
+    if (stored === 'he') return 'he';
+    if (stored === 'en') return 'en';
+    var from = '';
+    var path = '';
+    try { if (referrer) { var u = new URL(referrer); from = u.host; path = u.pathname; } } catch (e) { from = ''; }
+    if (from && from === host && /^\/(he\/)?([a-z0-9-]+\.html)?$/.test(path)) return 'en';
+    var first = (languages && languages.length ? languages[0] : '') || '';
+    return /^(he|iw)(-|$)/i.test(first) ? 'he' : 'en';
+}; var stored = null; try { stored = localStorage.getItem('paath-lang'); } catch (e) {} var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']; if (pick(stored, document.referrer, location.host, langs) === 'he') location.replace('he/licenses.html' + location.hash); })();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Licenses: PAATH</title>
 <meta name="description" content="The fonts on the PAATH website and the licenses they come with.">
 <meta name="theme-color" content="#07090c">
+<link rel="alternate" hreflang="en" href="https://paathsupport.github.io/licenses.html">
+<link rel="alternate" hreflang="he" href="https://paathsupport.github.io/he/licenses.html">
+<link rel="alternate" hreflang="x-default" href="https://paathsupport.github.io/licenses.html">
+
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="css/fonts.css">
@@ -21,6 +35,10 @@
       <a href="help.html">HELP</a>
       <a class="nav-go" href="index.html#join">JOIN THE TEST</a>
       
+      <details class="lang-pick">
+        <summary aria-label="Language" title="Language"><svg class="globe" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.9 5.5 3.9 9s-1.3 6.5-3.9 9c-2.6-2.5-3.9-5.5-3.9-9S9.4 5.5 12 3z"/></svg></summary>
+        <div class="lang-menu"><a href="licenses.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="he/licenses.html" hreflang="he" lang="he" data-lang="he">עברית</a></div>
+      </details>
     </nav>
   </div>
 </header>
@@ -30,17 +48,23 @@
     <p class="kick">OPEN SOURCE</p>
     <h1>Licenses</h1>
     <p class="lead">The fonts on this site and the licenses they come with. The app lists its own in Settings, About, Open-source licenses.</p>
-    <div class="grid-2 lic-grid">
+    <div class="grid-3 lic-grid">
       <div class="card">
-        <h2>IBM Plex Sans</h2>
-        <p>Copyright 2017 IBM Corp., with Reserved Font Name "Plex".</p>
-        <p>SIL Open Font License, Version 1.1.</p>
+        <h2><bdi lang="en">IBM Plex Sans</bdi></h2>
+        <p><bdi lang="en">Copyright 2017 IBM Corp., with Reserved Font Name "Plex".</bdi></p>
+        <p><bdi lang="en">SIL Open Font License, Version 1.1.</bdi></p>
         <a class="btn" href="assets/fonts/OFL-IBMPlexSans.txt" aria-label="Read the IBM Plex Sans license">READ THE LICENSE</a>
       </div>
       <div class="card">
-        <h2>JetBrains Mono</h2>
-        <p>Copyright 2020 The JetBrains Mono Project Authors.</p>
-        <p>SIL Open Font License, Version 1.1.</p>
+        <h2><bdi lang="en">IBM Plex Sans Hebrew</bdi></h2>
+        <p><bdi lang="en">Copyright 2017 IBM Corp., with Reserved Font Name "Plex".</bdi></p>
+        <p><bdi lang="en">SIL Open Font License, Version 1.1.</bdi></p>
+        <a class="btn" href="assets/fonts/OFL-IBMPlexSansHebrew.txt" aria-label="Read the IBM Plex Sans Hebrew license">READ THE LICENSE</a>
+      </div>
+      <div class="card">
+        <h2><bdi lang="en">JetBrains Mono</bdi></h2>
+        <p><bdi lang="en">Copyright 2020 The JetBrains Mono Project Authors.</bdi></p>
+        <p><bdi lang="en">SIL Open Font License, Version 1.1.</bdi></p>
         <a class="btn" href="assets/fonts/OFL-JetBrainsMono.txt" aria-label="Read the JetBrains Mono license">READ THE LICENSE</a>
       </div>
     </div>
@@ -63,6 +87,7 @@
     <p class="legal">This site uses no cookies and loads nothing from other sites.</p>
   </div>
 </footer>
+<script>document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[data-lang]'); if (!a) return; try { localStorage.setItem('paath-lang', a.getAttribute('data-lang')); } catch (err) {} a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash); }); document.addEventListener('click', function (e) { var d = document.querySelector('details.lang-pick'); if (d && d.open && !d.contains(e.target)) d.open = false; }); document.addEventListener('keydown', function (e) { var d = document.querySelector('details.lang-pick'); if (e.key === 'Escape' && d && d.open) { d.open = false; d.querySelector('summary').focus(); } });</script>
 
 </body>
 </html>

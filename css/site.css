@@ -22,8 +22,8 @@ a:hover { color: #6ee7d8; }
 ol[role="list"], ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 .wrap-wide { max-width: 1400px; container-type: inline-size; }
-.skip { position: absolute; left: -9999px; }
-.skip:focus { left: var(--gutter); top: 10px; z-index: 20; background: var(--panel); color: var(--ink); padding: 10px 14px; border-radius: 8px; }
+.skip { position: absolute; inset-inline-start: -9999px; top: -9999px; }
+.skip:focus { inset-inline-start: var(--gutter); top: 10px; z-index: 20; background: var(--panel); color: var(--ink); padding: 10px 14px; border-radius: 8px; }
 
 /* header */
 .site-head { position: sticky; top: 0; z-index: 10; background: rgba(7, 9, 12, .84); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
@@ -33,7 +33,7 @@ ol[role="list"], ul[role="list"] { list-style: none; margin: 0; padding: 0; }
 .logo:hover { color: var(--ink); }
 .logo img { width: 30px; height: 30px; border-radius: 8px; }
 .a { color: var(--orange); }
-.nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav { margin-inline-start: auto; display: flex; align-items: center; gap: 4px; }
 .nav a { font: 600 12px var(--mono); letter-spacing: .16em; color: var(--dim); text-decoration: none; padding: 9px 10px; border-radius: 8px; white-space: nowrap; }
 .nav a:hover { color: var(--ink); }
 .nav .nav-go { color: var(--orange); }
@@ -71,8 +71,8 @@ h3 { font-size: 18px; line-height: 1.3; }
 .num { font: 700 13px var(--mono); letter-spacing: .1em; color: var(--orange); }
 /* the app's corner brackets */
 .br::before, .br::after { content: ""; position: absolute; width: 18px; height: 18px; border: 0 solid var(--teal); opacity: .8; }
-.br::before { left: -6px; top: -6px; border-width: 2px 0 0 2px; }
-.br::after { right: -6px; bottom: -6px; border-width: 0 2px 2px 0; }
+.br::before { inset-inline-start: -6px; top: -6px; border-block-start-width: 2px; border-inline-start-width: 2px; }
+.br::after { inset-inline-end: -6px; bottom: -6px; border-block-end-width: 2px; border-inline-end-width: 2px; }
 .br-go::before, .br-go::after { border-color: var(--orange); }
 .grid-2, .grid-3, .grid-4 { display: grid; gap: 18px; }
 @media (min-width: 640px) { .grid-2, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -95,7 +95,7 @@ h3 { font-size: 18px; line-height: 1.3; }
 .hero-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 13% / 5.8%; }
 .hero-chip { position: absolute; right: 5%; top: 4%; transform: translateY(-50%); padding: 7px 12px; border-radius: 999px; white-space: nowrap;
   font: 600 11px var(--mono); letter-spacing: .16em; color: var(--teal); background: rgba(7, 9, 12, .88); border: 1px solid rgba(45, 212, 191, .45); }
-.hero-chip i { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px var(--teal); vertical-align: 1px; animation: pulse 2.4s ease-in-out infinite; }
+.hero-chip i { display: inline-block; width: 7px; height: 7px; margin-inline-end: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 10px var(--teal); vertical-align: 1px; animation: pulse 2.4s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .35; } }
 @media (max-width: 420px) { .hero-chip { font-size: 10px; letter-spacing: .1em; } }
 
@@ -119,15 +119,15 @@ h3 { font-size: 18px; line-height: 1.3; }
 .join .kick { color: var(--orange); text-shadow: 0 0 14px rgba(255, 122, 26, .4); }
 .join .card { padding: 28px; }
 .notes { margin-top: 26px !important; display: grid; gap: 8px; color: var(--dim); font-size: 15px; }
-.notes li { position: relative; padding-left: 22px; }
-.notes li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 8px; height: 2px; background: var(--orange); }
+.notes li { position: relative; padding-inline-start: 22px; }
+.notes li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .7em; width: 8px; height: 2px; background: var(--orange); }
 
 /* privacy */
 .privacy-grid { display: grid; gap: 28px; }
 @media (min-width: 860px) { .privacy-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
 .ticks { display: grid; gap: 14px; }
-.ticks li { position: relative; padding-left: 30px; color: var(--ink); font-size: 17px; }
-.ticks li::before { content: ""; position: absolute; left: 0; top: .45em; width: 12px; height: 7px; border: solid var(--teal); border-width: 0 0 2px 2px; transform: rotate(-45deg); }
+.ticks li { position: relative; padding-inline-start: 30px; color: var(--ink); font-size: 17px; }
+.ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .45em; width: 12px; height: 7px; border: solid var(--teal); border-width: 0 0 2px 2px; transform: rotate(-45deg); }
 
 /* footer */
 .site-foot { border-top: 1px solid var(--line); padding: 40px 0 48px; background: #05070a; }
@@ -146,8 +146,8 @@ h3 { font-size: 18px; line-height: 1.3; }
 .toc-h { margin: 22px 0 8px; font: 600 11px var(--mono); letter-spacing: .24em; color: var(--mute); }
 .toc-h:first-child { margin-top: 0; }
 .toc ul { list-style: none; margin: 0; padding: 0; }
-.toc a { display: block; padding: 6px 12px; border-left: 2px solid var(--line); color: var(--dim); text-decoration: none; font-size: 14px; line-height: 1.35; }
-.toc a:hover { color: var(--ink); border-left-color: var(--teal); }
+.toc a { display: block; padding: 6px 12px; border-inline-start: 2px solid var(--line); color: var(--dim); text-decoration: none; font-size: 14px; line-height: 1.35; }
+.toc a:hover { color: var(--ink); border-inline-start-color: var(--teal); }
 @media (min-width: 900px) { .help-side { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 110px); overflow: auto; } }
 @media (max-width: 899px) {
   .toc { padding: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -163,18 +163,18 @@ h3 { font-size: 18px; line-height: 1.3; }
 .entry summary::-webkit-details-marker { display: none; }
 .entry summary:hover { color: #fff; }
 .mk { position: relative; flex: 0 0 14px; height: 14px; }
-.mk::before, .mk::after { content: ""; position: absolute; left: 0; top: 6px; width: 14px; height: 2px; background: var(--teal); transition: transform .2s; }
+.mk::before, .mk::after { content: ""; position: absolute; inset-inline-start: 0; top: 6px; width: 14px; height: 2px; background: var(--teal); transition: transform .2s; }
 .mk::after { transform: rotate(90deg); }
 .entry[open] .mk::after { transform: rotate(0deg); }
-.entry-body { padding: 0 18px 18px 46px; color: var(--dim); }
-.steps { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.entry-body { padding: 0 18px 18px; padding-inline-start: 46px; color: var(--dim); }
+.steps { margin: 0; padding-inline-start: 20px; display: grid; gap: 8px; }
 .steps li::marker { color: var(--mute); }
 .step-one { margin: 0; }
-.tag { display: inline-block; margin-right: 6px; padding: 1px 7px; border-radius: 6px; font: 600 10px/1.7 var(--mono); letter-spacing: .14em; vertical-align: 2px; }
+.tag { display: inline-block; margin-inline-end: 6px; padding: 1px 7px; border-radius: 6px; font: 600 10px/1.7 var(--mono); letter-spacing: .14em; vertical-align: 2px; }
 .tag-samsung { color: #7dd3fc; border: 1px solid rgba(125, 211, 252, .45); }
 .tag-others { color: #c4b5fd; border: 1px solid rgba(196, 181, 253, .45); }
 .inapp { margin: 14px 0 0; font: 600 11px/1.6 var(--mono); letter-spacing: .1em; color: var(--orange); }
-@media (max-width: 560px) { .entry-body { padding-left: 18px; } }
+@media (max-width: 560px) { .entry-body { padding-inline-start: 18px; } }
 
 /* 404 */
 .lost { padding: clamp(72px, 14vw, 160px) 0; }
@@ -183,3 +183,42 @@ h3 { font-size: 18px; line-height: 1.3; }
 .licenses { padding: clamp(56px, 10vw, 120px) 0; }
 .lic-grid { margin-top: 36px; }
 .lic-grid h2 { margin-top: 0; font-size: 18px; line-height: 1.3; }
+
+/* Hebrew (owner, 2026-10-16): dir="rtl" flips every start and end above. Hebrew has no capitals and wide spacing
+   hurts reading, so the monospace capitals become the Hebrew face, semibold, at normal spacing. The pictures, the
+   hero's layout and the tick's shape do not flip. */
+html[lang="he"] { --sans: "IBM Plex Sans Hebrew", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+html[lang="he"] :is(.kick, .nav a, .btn, .note, .hero-chip, .shot figcaption, .toc-h, .tag, .inapp) { font-family: var(--sans); font-weight: 600; letter-spacing: normal; }
+html[lang="he"] :is(.kick, .nav a, .note, .toc-h) { font-size: 14px; }
+/* The language selector (owner, 2026-10-16): a globe that opens the list of languages, each named in its own letters.
+   The list is drawn only once open, so English pages still load no Hebrew face until it is. */
+.lang-pick { position: relative; }
+.lang-pick summary { display: flex; align-items: center; padding: 9px 8px; border-radius: 8px; color: var(--dim); cursor: pointer; list-style: none; }
+.lang-pick summary::-webkit-details-marker { display: none; }
+.lang-pick summary:hover, .lang-pick[open] summary { color: var(--ink); }
+.globe { display: block; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.lang-menu { position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 30; min-width: 150px; padding: 6px; display: grid; gap: 2px;
+  background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; box-shadow: 0 18px 40px rgba(0, 0, 0, .55); }
+.nav .lang-pick .lang-menu a { display: block; padding: 10px 12px; border-radius: 8px; font: 500 15px var(--sans); letter-spacing: normal; color: var(--dim); text-align: start; }
+.nav .lang-pick .lang-menu a:hover { background: var(--line); color: var(--ink); }
+.nav .lang-pick .lang-menu a[aria-current] { color: var(--teal); }
+.lost-he { --sans: "IBM Plex Sans Hebrew", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin-top: 56px; font-family: var(--sans); }
+.lost-he .btn { font-family: inherit; letter-spacing: normal; }
+.lost-h { font-size: clamp(32px, 4.6vw, 48px); }
+
+/* Phones (owner, 2026-10-16): with the language selector the menu fits as it was from 375 px up in both languages;
+   narrower phones tighten it to stay inside the side margins (checked by tools/shoot.mjs at 320, 360 and 375 px).
+   Only the menu's own links: the selector's list keeps its size. */
+@media (max-width: 374px) {
+  .head-row { gap: 8px; }
+  .site-head .logo { gap: 6px; letter-spacing: .06em; }
+  .nav { gap: 0; }
+  .nav > a, .lang-pick summary { padding: 9px 4px; }
+  .nav > a { letter-spacing: .06em; }
+  html[lang="he"] .nav > a { letter-spacing: normal; font-size: 13px; }
+}
+@media (max-width: 359px) {
+  .site-head .logo { letter-spacing: .02em; }
+  .nav > a, .lang-pick summary { padding: 9px 3px; }
+  html[lang="he"] .nav > a { font-size: 12px; }
+}
