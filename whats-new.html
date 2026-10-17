@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<script>(function () { var pick = function pickLanguage(stored, referrer, host, languages) {
+    if (stored === 'he') return 'he';
+    if (stored === 'en') return 'en';
+    var from = '';
+    var path = '';
+    try { if (referrer) { var u = new URL(referrer); from = u.host; path = u.pathname; } } catch (e) { from = ''; }
+    if (from && from === host && /^\/(he\/)?([a-z0-9-]+\.html)?$/.test(path)) return 'en';
+    var first = (languages && languages.length ? languages[0] : '') || '';
+    return /^(he|iw)(-|$)/i.test(first) ? 'he' : 'en';
+}; var stored = null; try { stored = localStorage.getItem('paath-lang'); } catch (e) {} var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']; if (pick(stored, document.referrer, location.host, langs) === 'he') location.replace('he/whats-new.html' + location.hash); })();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's new: PAATH</title>
+<meta name="description" content="What each version of PAATH brought, newest first.">
+<meta name="theme-color" content="#07090c">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paathsupport.github.io/whats-new.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="What's new in PAATH">
+<meta property="og:description" content="What each version brought, newest first.">
+<meta property="og:image" content="https://paathsupport.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://paathsupport.github.io/whats-new.html">
+<link rel="alternate" hreflang="he" href="https://paathsupport.github.io/he/whats-new.html">
+<link rel="alternate" hreflang="x-default" href="https://paathsupport.github.io/whats-new.html">
+
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="logo" href="index.html" aria-label="PAATH home"><img src="assets/icon-64.png" alt="" width="30" height="30"><span>PA<span class="a">A</span>TH</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">HOW IT WORKS</a>
+      <a href="help.html">HELP</a>
+      <a class="nav-news" href="whats-new.html">WHAT'S NEW</a>
+      <a class="nav-go" href="index.html#join">JOIN THE TEST</a>
+      
+      <details class="lang-pick">
+        <summary aria-label="Language" title="Language"><svg class="globe" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.5 3.9 5.5 3.9 9s-1.3 6.5-3.9 9c-2.6-2.5-3.9-5.5-3.9-9S9.4 5.5 12 3z"/></svg></summary>
+        <div class="lang-menu"><a href="whats-new.html" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="he/whats-new.html" hreflang="he" lang="he" data-lang="he">עברית</a></div>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="news">
+  <div class="wrap">
+    <p class="kick">RELEASE NOTES</p>
+    <h1 class="news-h">What's new</h1>
+    <p class="lead">What each version of PAATH brought, newest first.</p>
+    <div class="news-list">
+<section class="release" id="v0-4-179">
+<div class="release-head"><h2>0.4.179</h2><time datetime="2026-10-17">October 17, 2026</time></div>
+<ul class="steps">
+<li>Easier to read: lighter gray and larger text across the app.</li>
+<li>At 1080p on a weak connection, the picture steps lower before it breaks up. If even that is too much, PAATH switches to 720p for the rest of the drive (never right after a call) and says so on the car's screen. You can turn this off in Video &amp; Sound.</li>
+<li>Samsung hotspot guide: on phones where PAATH can't read the band, tap DONE once you have set it.</li>
+</ul>
+</section>
+<section class="release" id="v0-4-177">
+<div class="release-head"><h2>0.4.177</h2><time datetime="2026-10-16">October 16, 2026</time></div>
+<ul class="steps">
+<li>Samsung phones: a step by step guide to the best hotspot setup for your car, in HELP. The steps sit in your notifications and tick as you set them.</li>
+<li>If your car can't find the phone's 5 GHz hotspot, PAATH offers the guide.</li>
+<li>On a weak connection the car's picture now holds still for a moment instead of breaking up into green blocks.</li>
+</ul>
+</section>
+<section class="release" id="v0-4-176">
+<div class="release-head"><h2>0.4.176</h2><time datetime="2026-10-16">October 16, 2026</time></div>
+<ul class="steps">
+<li>PAATH now speaks Hebrew. It follows your phone's language, or pick one in Settings, Language.</li>
+<li>A guide for turning on Android Auto's head unit server, with a picture and the steps in a notification.</li>
+<li>The setup gets your certificate for you.</li>
+<li>Hold the car address on Home to copy it.</li>
+<li>Updates come from Google Play, like your other apps; PAATH no longer asks by itself.</li>
+</ul>
+</section>
+<section class="release" id="v0-4-170">
+<div class="release-head"><h2>0.4.170</h2><time datetime="2026-10-13">October 13, 2026</time></div>
+<ul class="steps">
+<li>Fixes PAATH saying "Android Auto is on another screen" after STOP and START when no other screen was connected.</li>
+<li>After STOP and START, the car screen catches up within seconds. It could keep an old message, like ANDROID AUTO IS NOT READY, over a working picture for up to a minute.</li>
+</ul>
+</section>
+<section class="release" id="v0-4-166">
+<div class="release-head"><h2>0.4.166</h2><time datetime="2026-10-13">October 13, 2026</time></div>
+<ul class="steps">
+<li>If Android Auto is already on another screen in the car, PAATH now waits and says so, then connects by itself once that screen lets go.</li>
+<li>Opening PAATH's car page in a second browser moves the picture there. The first one offers TAKE BACK.</li>
+<li>PAATH now tells you when a new version is ready on Google Play.</li>
+<li>About lists the open-source licenses PAATH is built on.</li>
+</ul>
+</section>
+<section class="release" id="v0-4-160">
+<div class="release-head"><h2>0.4.160</h2><time datetime="2026-10-11">October 11, 2026</time></div>
+<ul class="steps">
+<li>PAATH's screens no longer show mirrored on phones set to a right-to-left language.</li>
+<li>A new Support PAATH page in Settings: donate, share PAATH, send your log, or leave feedback on Google Play.</li>
+<li>About shows the support email. Tap it to write.</li>
+<li>Help now tells Google Maps' "Phone needs to cool down" apart from PAATH's "Phone is hot" banner.</li>
+</ul>
+</section>
+    </div>
+    <p class="more">Something not right? In the app, open Settings, Support PAATH and tap Share Log. More fixes are on the <a href="help.html">Help page</a>.</p>
+  </div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="logo" href="index.html" aria-label="PAATH home"><img src="assets/icon-64.png" alt="" width="30" height="30"><span>PA<span class="a">A</span>TH</span></a>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="help.html">Help</a>
+        <a href="whats-new.html">What's new</a>
+        <a href="https://paathsupport.github.io/paath-site/">Privacy</a>
+        <a href="licenses.html">Licenses</a>
+        <a href="https://ko-fi.com/paath">Support the project</a>
+        <a href="mailto:paath.support@gmail.com">paath.support@gmail.com</a>
+      </nav>
+    </div>
+    <p class="legal">PAATH is free and provided as is, without warranty. You stay responsible while driving; follow your local laws on screens in the car.</p>
+    <p class="legal">PAATH is an independent project and is not affiliated with, endorsed by, or sponsored by Google or Tesla. Android Auto is a trademark of Google LLC. Tesla is a trademark of Tesla, Inc.</p>
+    <p class="legal">This site uses no cookies and loads nothing from other sites.</p>
+  </div>
+</footer>
+<script>document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[data-lang]'); if (!a) return; try { localStorage.setItem('paath-lang', a.getAttribute('data-lang')); } catch (err) {} a.setAttribute('href', a.getAttribute('href').split('#')[0] + location.hash); }); document.addEventListener('click', function (e) { var d = document.querySelector('details.lang-pick'); if (d && d.open && !d.contains(e.target)) d.open = false; }); document.addEventListener('keydown', function (e) { var d = document.querySelector('details.lang-pick'); if (e.key === 'Escape' && d && d.open) { d.open = false; d.querySelector('summary').focus(); } });</script>
+
+</body>
+</html>
