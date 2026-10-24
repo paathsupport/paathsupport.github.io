@@ -57,7 +57,9 @@
 <li><a href="#how-paath-works">איך PAATH עובד</a></li>
 <li><a href="#one-time-setup">הגדרה חד פעמית</a></li>
 <li><a href="#best-hotspot-setup">ההגדרה הטובה ביותר לנקודה החמה</a></li>
+<li><a href="#hotspot-on-by-itself">נקודה חמה שנדלקת לבד</a></li>
 <li><a href="#what-is-normal">מה הוא מצב תקין</a></li>
+<li><a href="#the-connection-test">בדיקת החיבור</a></li>
 </ul>
 <p class="toc-h">משהו לא עובד</p>
 <ul>
@@ -70,6 +72,7 @@
 <li><a href="#picture-is-cut-off-or-has-black-bars">התמונה חתוכה או שיש פסים שחורים</a></li>
 <li><a href="#no-sound-when-this-phone-is-the-screen">אין צליל כשהטלפון הזה הוא המסך</a></li>
 <li><a href="#phone-needs-to-cool-down-or-phone-is-hot">&quot;הטלפון צריך להתקרר&quot; או &quot;הטלפון חם&quot;</a></li>
+<li><a href="#older-tesla-with-an-intel-atom-processor">טסלה מדגם ישן יותר עם מעבד Intel Atom</a></li>
 <li><a href="#still-stuck">עדיין תקועים?</a></li>
 </ul>
 </nav>
@@ -115,6 +118,22 @@
 <p class="inapp">באפליקציה: הכפתור הגדרות נקודה חמה בעמוד העזרה.</p>
 </div>
 </details>
+<details class="entry" id="hotspot-on-by-itself">
+<summary><span class="mk" aria-hidden="true"></span><span>נקודה חמה שנדלקת לבד</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li><span class="tag tag-samsung">סמסונג</span> פתחו את מצבים ושגרות (Modes and Routines), בהגדרות (Settings) של הטלפון.</li>
+<li><span class="tag tag-samsung">סמסונג</span> הקישו על + למעלה, צור שגרה (Create routine).</li>
+<li><span class="tag tag-samsung">סמסונג</span> תחת אם (If), הקישו על הוסף את הגורם שיפעיל שגרה זו (Add what will trigger this routine). גללו למטה אל חיבורים (Connections) והקישו על מכשיר Bluetooth (Bluetooth device).</li>
+<li><span class="tag tag-samsung">סמסונג</span> הקישו על מכשיר (Device), ואז על הרכב שלכם תחת מכשירים משויכים (Paired devices). מחובר (Connected) כבר נבחר, אז הקישו על בוצע (Done).</li>
+<li><span class="tag tag-samsung">סמסונג</span> תחת אז (Then), הקישו על הוסף דברים ששגרה זו תבצע (Add what this routine will do). הקישו על חיבורים (Connections), גללו למטה והקישו על נתב אלחוטי נייד (Mobile Hotspot).</li>
+<li><span class="tag tag-samsung">סמסונג</span> מופעל (On) כבר נבחר, אז הקישו על בוצע (Done). את ההגדרה כשהשגרה מסתיימת (When routine ends) השאירו כמו שהיא: היא כבר נכונה.</li>
+<li><span class="tag tag-samsung">סמסונג</span> הקישו על שמור (Save) למטה, תנו לשגרה את השם PAATH, ואז הקישו על בוצע (Done).</li>
+</ol>
+<p class="step-apart"><span class="tag tag-others">טלפונים אחרים</span> בטלפונים אחרים אין שגרות. PAATH יכול להפעיל את הנקודה החמה בעזרת האפליקציה החינמית Shizuku: באפליקציית PAATH, הגדרות, רשת, מתקדם.</p>
+<p class="inapp"><span class="tag tag-samsung">סמסונג</span> באפליקציה: הכפתור הגדרת שגרה בעמוד העזרה.</p>
+</div>
+</details>
 <details class="entry" id="what-is-normal">
 <summary><span class="mk" aria-hidden="true"></span><span>מה הוא מצב תקין</span></summary>
 <div class="entry-body">
@@ -125,9 +144,21 @@
 <li>בזמן שיחת טלפון התמונה יורדת באיכות בכוונה, כדי שתמשיך לזוז.</li>
 <li>הטלפון מתחמם. רוב החום מגיע מהפעלת Android Auto, מהנקודה החמה ומהבלוטות', לא מאיכות התמונה.</li>
 <li>אם עצירת שידור כשיוצאים מהרכב פועלת, PAATH נעצר בערך 25 שניות אחרי שאתם יוצאים.</li>
-<li>לתמונה חדה יותר, העלו את קצב הסיביות בהגדרות, וידאו ושמע. קצב הפריימים לא משנה כמה החיבור מעביר.</li>
+<li>לתמונה חדה יותר, בחרו &quot;חדה&quot; בהגדרות, וידאו ושמע. אם היא מתקשה בנסיעה, PAATH חוזר לבד ל&quot;מאוזנת&quot;.</li>
 </ul>
 
+</div>
+</details>
+<details class="entry" id="the-connection-test">
+<summary><span class="mk" aria-hidden="true"></span><span>בדיקת החיבור</span></summary>
+<div class="entry-body">
+<ul class="steps">
+<li>בנסיעה הראשונה עם רכב, מסך הרכב מציע בדיקה של בערך 30 שניות. הריצו אותה כשהרכב עומד.</li>
+<li>היא בודקת מה מסך הרכב מציג, מה הטלפון שלכם מייצר ומה הקישור מעביר, ואז בוחרת &quot;יציבה&quot; או &quot;מאוזנת&quot; ומסבירה למה.</li>
+<li>אחרי כמה נסיעות יציבות PAATH מעלה את התמונה לבד, ואחרי כמה נסיעות שמתקשות הוא מוריד אותה. שיחות טלפון ונסיעה לאחור לא נספרות.</li>
+<li>הריצו אותה שוב בהגדרות, וידאו ושמע, כשהאפליקציה PAATH פתוחה ברכב.</li>
+</ul>
+<p class="inapp">באפליקציה: הכפתור הגדרות וידאו ושמע בעמוד העזרה.</p>
 </div>
 </details>
 </section>
@@ -164,7 +195,7 @@
 <li>בדקו שהרכב מחובר לנקודה החמה של הטלפון.</li>
 <li>בדקו שהנתונים הניידים פועלים. הרכב עוזב תוך שנייה נקודה חמה בלי אינטרנט.</li>
 <li>בדקו שהאפליקציה PAATH פועלת.</li>
-<li>השתמשו בכתובת שמופיעה במסך הבית של PAATH.</li>
+<li>השתמשו בכתובת שמופיעה במסך הבית של PAATH, כולל ⁦https://⁩: יש רכבים שלא פותחים אותה בלי זה.</li>
 <li>אחרי עדכון של PAATH, טענו מחדש את הדף ברכב פעם אחת.</li>
 </ol>
 <p class="inapp">באפליקציה: הכפתור הגדרות נקודה חמה בעמוד העזרה.</p>
@@ -227,6 +258,17 @@
 <li>כדי שהטלפון יישאר קריר יותר, אל תטענו אותו כל עוד PAATH פועל, ושמרו אותו מחוץ לשמש וליד פתח מיזוג.</li>
 </ul>
 
+</div>
+</details>
+<details class="entry" id="older-tesla-with-an-intel-atom-processor">
+<summary><span class="mk" aria-hidden="true"></span><span>טסלה מדגם ישן יותר עם מעבד Intel Atom</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>PAATH עובד גם ברכבים האלה, ובוחר בעצמו פורמט וידאו שהרכב יכול לנגן.</li>
+<li>אם התמונה אינה יציבה, בחרו &quot;יציבה&quot; בהגדרות, וידאו ושמע.</li>
+<li>כדי לראות את המעבד של הרכב: בקרות (Controls), תוכנה (Software), מידע נוסף על הרכב (Additional Vehicle Information).</li>
+</ol>
+<p class="inapp">באפליקציה: הכפתור הגדרות וידאו ושמע בעמוד העזרה.</p>
 </div>
 </details>
 <details class="entry" id="still-stuck">

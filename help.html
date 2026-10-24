@@ -66,7 +66,9 @@
 <li><a href="#how-paath-works">How PAATH works</a></li>
 <li><a href="#one-time-setup">One time setup</a></li>
 <li><a href="#best-hotspot-setup">Best hotspot setup</a></li>
+<li><a href="#hotspot-on-by-itself">Hotspot on by itself</a></li>
 <li><a href="#what-is-normal">What is normal</a></li>
+<li><a href="#the-connection-test">The connection test</a></li>
 </ul>
 <p class="toc-h">TROUBLESHOOTING</p>
 <ul>
@@ -79,6 +81,7 @@
 <li><a href="#picture-is-cut-off-or-has-black-bars">The picture is cut off or has black bars</a></li>
 <li><a href="#no-sound-when-this-phone-is-the-screen">No sound when this phone is the screen</a></li>
 <li><a href="#phone-needs-to-cool-down-or-phone-is-hot">&quot;Phone needs to cool down&quot; or &quot;Phone is hot&quot;</a></li>
+<li><a href="#older-tesla-with-an-intel-atom-processor">Older Tesla with an Intel Atom processor</a></li>
 <li><a href="#still-stuck">Still stuck?</a></li>
 </ul>
 </nav>
@@ -124,6 +127,22 @@
 <p class="inapp">In the app: the HOTSPOT SETTINGS button on the HELP page.</p>
 </div>
 </details>
+<details class="entry" id="hotspot-on-by-itself">
+<summary><span class="mk" aria-hidden="true"></span><span>Hotspot on by itself</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li><span class="tag tag-samsung">SAMSUNG</span> Open Modes and Routines, in your phone's Settings.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Tap + at the top (Create routine).</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Under If, tap Add what will trigger this routine. Scroll down to Connections and tap Bluetooth device.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Tap Device, then tap your car under Paired devices. Connected is already chosen, so tap Done.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Under Then, tap Add what this routine will do. Tap Connections, scroll down and tap Mobile Hotspot.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> On is already chosen, so tap Done. Leave When routine ends as it is: it is already right.</li>
+<li><span class="tag tag-samsung">SAMSUNG</span> Tap Save at the bottom, name it PAATH, then tap Done.</li>
+</ol>
+<p class="step-apart"><span class="tag tag-others">OTHER PHONES</span> Other phones have no routines. PAATH can turn the hotspot on with the free Shizuku app: in PAATH, Settings, Network, Advanced.</p>
+<p class="inapp"><span class="tag tag-samsung">SAMSUNG</span> In the app: the SET UP THE ROUTINE button on the HELP page.</p>
+</div>
+</details>
 <details class="entry" id="what-is-normal">
 <summary><span class="mk" aria-hidden="true"></span><span>What is normal</span></summary>
 <div class="entry-body">
@@ -134,9 +153,21 @@
 <li>During a phone call the picture gets softer on purpose, so it keeps moving.</li>
 <li>The phone gets warm. Most of the heat comes from Android Auto, the hotspot and Bluetooth, not from the picture quality.</li>
 <li>If Stop when I leave the car is on, PAATH stops about 25 seconds after you leave.</li>
-<li>For a sharper picture, raise the bitrate in Settings, Video &amp; Sound. The frame rate does not change how much the connection carries.</li>
+<li>For a sharper picture, pick Sharp in Settings, Video &amp; Sound. If it struggles on the road, PAATH moves back to Balanced by itself.</li>
 </ul>
 
+</div>
+</details>
+<details class="entry" id="the-connection-test">
+<summary><span class="mk" aria-hidden="true"></span><span>The connection test</span></summary>
+<div class="entry-body">
+<ul class="steps">
+<li>On the first drive with a car, the car's screen offers a test of about 30 seconds. Run it parked.</li>
+<li>It checks what the car's screen shows, what your phone makes and what the link carries, then picks Steady or Balanced and says why.</li>
+<li>After a few drives that hold steady, PAATH moves the picture up by itself, and after a few that struggle, down. Calls and reverse do not count.</li>
+<li>Run it again from Settings, Video &amp; Sound, with PAATH open in the car.</li>
+</ul>
+<p class="inapp">In the app: the VIDEO &amp; SOUND SETTINGS button on the HELP page.</p>
 </div>
 </details>
 </section>
@@ -147,7 +178,7 @@
 <div class="entry-body">
 <ol class="steps">
 <li>Unlock your phone. Android Auto may be waiting for you. Tap PAATH's notification if you see one. Do Not Disturb can hide it.</li>
-<li>If PAATH says Android Auto is not responding, clear all your recent apps, then open Android Auto settings and turn on Start head unit server again. Stopping and starting PAATH does not fix this.</li>
+<li>If PAATH says Android Auto is not responding, close all your recent apps, then open Android Auto settings and turn on Start head unit server again. Stopping and starting PAATH does not fix this.</li>
 <li>If your phone restarted or Android Auto was closed, check that Start head unit server is on. It does not turn itself back on.</li>
 <li>Make sure Android Auto is up to date. Very old versions ignore PAATH.</li>
 </ol>
@@ -173,7 +204,7 @@
 <li>Check that the car is connected to your phone's hotspot.</li>
 <li>Check that mobile data is on. The car leaves a hotspot without internet within a second.</li>
 <li>Check that PAATH is started.</li>
-<li>Use the address shown on PAATH's home screen.</li>
+<li>Use the address shown on PAATH's home screen, https:// included: some cars do not open it without.</li>
 <li>After updating PAATH, reload the page in the car once.</li>
 </ol>
 <p class="inapp">In the app: the HOTSPOT SETTINGS button on the HELP page.</p>
@@ -236,6 +267,17 @@
 <li>To keep the phone cooler, avoid charging it while PAATH runs, and keep it out of the sun and near an air vent.</li>
 </ul>
 
+</div>
+</details>
+<details class="entry" id="older-tesla-with-an-intel-atom-processor">
+<summary><span class="mk" aria-hidden="true"></span><span>Older Tesla with an Intel Atom processor</span></summary>
+<div class="entry-body">
+<ol class="steps">
+<li>PAATH works on these cars too, and picks a video format the car can play by itself.</li>
+<li>If the picture is choppy, pick Steady in Settings, Video &amp; Sound.</li>
+<li>To see your car's processor: Controls, Software, Additional Vehicle Information.</li>
+</ol>
+<p class="inapp">In the app: the VIDEO &amp; SOUND SETTINGS button on the HELP page.</p>
 </div>
 </details>
 <details class="entry" id="still-stuck">
